@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+}
+
+.navbar-links{
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-links ul{
+    display: flex;
+}
+
+.navbar-links ul li a, .mobile-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-links ul li{
+    list-style-type: none;
+    margin-left: 1rem;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+.logo{
+    width: 62px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.signin-btn{
+    all: unset;
+    font-family: var(--font-family);
+    cursor: pointer;
+    color: #fff;
+}
+
+.signup-btn{
+    all: unset;
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    background-color: var(--color-orange);
+    padding: .8rem .5rem;
+    border-radius: 4px;
+    margin-left: .4rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.toggle-menu svg{
+    display: none;
+}
+
+.mobile-menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    background-color: var(--color-footer);
+    padding: 2rem;
+    margin: 1rem 1rem;
+    line-height: 1.5rem;
+    box-shadow: 0 0 5 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    animation: scale-up 0.4s cubic-bezier(0.390, 0.575, 0.798, 1);
+}
+
+.mobile-menu .navbar-login{
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu .navbar-login .signup-btn{
+    margin-left: inherit;
+    margin-top: .3rem;
+}
+
+.mobile-menu ul li{
+    list-style-type: none;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+@keyframes scale-up {
+    0%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .navbar-links ul{
+        display: none;
+    }
+
+    .navbar-login{
+        display: none;
+    }
+
+    .toggle-menu svg{
+        display: flex;
+        cursor: pointer;
+    }
+    .navbar{
+        padding: 2rem 3.5rem;
+    }
+}

@@ -1,0 +1,32 @@
+.feature-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+.feature-container p {
+    max-width: 33rem;
+    text-align: justify;
+    font-size: .8rem;
+    font-weight: 500;
+    font-family: var(--font-family);
+    line-height: 1.3rem
+}
+.line {
+    max-width: 2.2rem;
+    height: .2rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-bar);
+}
+.feature-container .feature-heading h3{
+    color: #fff;
+    font-size: 1.3rem;
+    letter-spacing: -0.08rem;
+    font-family: var(--font-family);
+}
+
+@media screen and (max-width: 900px){
+    .feature-heading{
+        flex-direction: column;
+    }
+}
