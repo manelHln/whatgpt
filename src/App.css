@@ -24,3 +24,15 @@ body{
         padding: 2rem 0;
     }
 }
+
+@media screen and (max-width: 750px) {
+    .blog-container, .whatgpt3-container, .features-container, .possibilty-container, .cta-container, .header{
+        margin: 2.5rem !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .blog-container, .whatgpt3-container, .features-container, .possibility-container, .cta-container, .header{
+        margin: 1.5rem !important;
+    }
+}
